@@ -1,5 +1,7 @@
 package com.ssi;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -20,6 +22,14 @@ public class ClientOne {
 		//Info info=(Info)context.getBean("companyinfo");
 		Info info=context.getBean(Info.class,"companyinfo");
 		System.out.println(info);
+		/*
+		System.out.println(info.getCompanyName());
+		System.out.println(info.getCompanyAddress());
+		List<String> emails=info.getEmails();
+		for(String email:emails) {
+			System.out.println(email);
+		}
+		*/
 	}
 
 }

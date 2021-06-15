@@ -10,9 +10,50 @@
 
 
 	<bean id="companyinfo" class="com.ssi.Info">
-		<property name="companyName" value="ABC Ltd."/>
-		<property name="companyAddress" value="Palasia, Indore"/>
+		<property name="companyName" value="ABC Ltd." />
+		<property name="companyAddress" value="Palasia, Indore" />
+		
+		<property name="management">
+			<map>
+				<entry key="chairman" value="Mr. ABC"/>
+				<entry key="president"	value="Mr. XYZ"/>
+				<entry key="vice-president" value="Mr. PQR"/>
+			</map>
+		</property>
+		
+		<property name="mobiles">
+			<set>
+				<value>9826012345</value>
+				<value>9990022484</value>
+				<value>9826012345</value>
+			</set>
+		</property>
+		<property name="emails">
+			<list>
+				<value>admin@abcltd.com</value>
+				<value>info@abcltd.com</value>
+				<value>general@gmail.com</value>
+				<value>general@gmail.com</value>
+			</list>
+		</property>
 	</bean>
+	
+	
+
+
+	<bean id="airtelSIM" class="com.ssi.AirtelSIM">
+		<property name="mobileNumber" value="9992233445" />
+	</bean>
+
+	<bean id="jioSIM" class="com.ssi.JioSIM">
+		<property name="mobileNumber" value="7000088558" />
+	</bean>
+
+	<bean id="mobile" class="com.ssi.Mobile">
+		<property name="sim" ref="jioSIM" />
+	</bean>
+
+
 
 
 
