@@ -7,20 +7,58 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	
 
+	<bean id="address1" class="com.ssi.Address">
+		<property name="hno" value="5511" />
+		<property name="street" value="Xyz Street" />
+		<property name="city" value="Indore" />
+	</bean>
+
+	<bean id="address2" class="com.ssi.Address">
+		<property name="hno" value="6622" />
+		<property name="street" value="Abc Street" />
+		<property name="city" value="Mumbai" />
+	</bean>
 
 	<bean id="companyinfo" class="com.ssi.Info">
 		<property name="companyName" value="ABC Ltd." />
-		<property name="companyAddress" value="Palasia, Indore" />
 		
+		<property name="companyAddresses">
+			<list>
+				<ref bean="address1"/>
+				<ref bean="address2"/>
+			</list>
+		</property>
+		
+		<!-- 
+			<property name="companyAddress" ref="address1" /> 
+		-->
+		<!-- 
+			<property name="companyAddress">
+				<bean class="com.ssi.Address">
+					<property name="hno" value="10001" />
+					<property name="street" value="Pqr Street" />
+					<property name="city" value="Delhi" />
+				</bean>
+			</property> 
+		-->
+		
+		
+		<property name="branches">
+			<props>
+				<prop key="br101">Indore</prop>
+				<prop key="br102">Bhopal</prop>
+			</props>
+		</property>
 		<property name="management">
 			<map>
 				<entry key="chairman" value="Mr. ABC"/>
-				<entry key="president"	value="Mr. XYZ"/>
-				<entry key="vice-president" value="Mr. PQR"/>
+				<entry key="president" value="Mr. XYZ" />
+				<entry key="vice-president" value="Mr. PQR" />
 			</map>
 		</property>
-		
+
 		<property name="mobiles">
 			<set>
 				<value>9826012345</value>
@@ -37,8 +75,8 @@
 			</list>
 		</property>
 	</bean>
-	
-	
+
+
 
 
 	<bean id="airtelSIM" class="com.ssi.AirtelSIM">
