@@ -20,7 +20,7 @@ public class ClientOne {
 		//step-2	(ask your container to provide desired instance)
 		
 		//Info info=(Info)context.getBean("companyinfo");
-		Info info=context.getBean(Info.class,"companyinfo");
+		Info info=context.getBean("companyinfo",Info.class);
 		System.out.println(info);
 		/*
 		System.out.println(info.getCompanyName());

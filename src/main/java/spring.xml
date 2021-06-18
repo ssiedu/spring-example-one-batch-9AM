@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	
+ 
 
 	<bean id="address1" class="com.ssi.Address">
 		<property name="hno" value="5511" />
@@ -21,7 +21,7 @@
 		<property name="city" value="Mumbai" />
 	</bean>
 
-	<bean id="companyinfo" class="com.ssi.Info">
+	<bean id="companyinfo" class="com.ssi.Info" scope="prototype">
 		<property name="companyName" value="ABC Ltd." />
 		
 		<property name="companyAddresses">
