@@ -8,8 +8,9 @@ public class MobileClient {
 	public static void main(String[] args) {
 		
 		
-		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
+		ApplicationContext context=new ClassPathXmlApplicationContext("spring2.xml");
 		Mobile mobile=context.getBean(Mobile.class,"mobile");
+		System.out.println(mobile.getBrand());
 		
 		/*
 		//SIM sim=context.getBean(AirtelSIM.class,"airtelSIM");

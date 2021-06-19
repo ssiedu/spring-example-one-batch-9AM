@@ -79,18 +79,7 @@
 
 
 
-	<bean id="airtelSIM" class="com.ssi.AirtelSIM">
-		<property name="mobileNumber" value="9992233445" />
-	</bean>
-
-	<bean id="jioSIM" class="com.ssi.JioSIM">
-		<property name="mobileNumber" value="7000088558" />
-	</bean>
-
-	<bean id="mobile" class="com.ssi.Mobile">
-		<property name="sim" ref="jioSIM" />
-	</bean>
-
+	
 
 
 

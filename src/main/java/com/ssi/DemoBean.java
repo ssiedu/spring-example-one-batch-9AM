@@ -8,17 +8,31 @@ public class DemoBean implements InitializingBean, DisposableBean {
 	private int x;
 	private String y;
 	
+	public DemoBean() {
+		System.out.println("Zero Args Constructor Called ...!");
+	}
+	public DemoBean(String x, String y) {
+		System.out.println("Two Args (String,String) Constructor Called...!");
+	}
+	
+	public DemoBean(int x, String y) {
+		System.out.println("Two Args (int,String) Constructor Called...!");
+		this.x = x;
+		this.y = y;
+	}
+
+
+
+
 	public void stop() {
-		System.out.println("Cleaning Up...!");
+		//System.out.println("Cleaning Up...!");
 	}
 	
 	public void doIt() {
-		System.out.println("Now Doing Processing....!");
+		//System.out.println("Now Doing Processing....!");
 	}
 	
-	public DemoBean() {
-		System.out.println("Zero Args Constructor Called ...");
-	}
+	
 	
 	public int getX() {
 		return x;
@@ -43,12 +57,12 @@ public class DemoBean implements InitializingBean, DisposableBean {
 	}
 
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("Doing Some Processing After All Properties Set...!");
+		//System.out.println("Doing Some Processing After All Properties Set...!");
 		
 	}
 
 	public void destroy() throws Exception {
-		System.out.println("This is Destry Method...!");
+		//System.out.println("This is Destry Method...!");
 		
 	}
 	

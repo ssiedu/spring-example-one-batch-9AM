@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!-- 
+	 <bean id="airtelSIM" class="com.ssi.AirtelSIM">
+		<property name="mobileNumber" value="9992233445" />
+	</bean> -->
+	
+	<bean id="jioSIM" class="com.ssi.JioSIM">
+		<property name="mobileNumber" value="7000088558" />
+	</bean>
+
+	<bean id="mobile" class="com.ssi.Mobile" autowire="byType">
+		<!-- <constructor-arg ref="jioSIM"  /> -->
+		<!-- <property name="sim" ref="jioSIM" /> -->
+		<property name="brand" value="Samsung"/>
+	</bean>
+
+
+<!-- 	
+    <bean id="airtelSIM" class="com.ssi.AirtelSIM">
+		<property name="mobileNumber" value="9992233445" />
+	</bean>
+
+	<bean id="jioSIM" class="com.ssi.JioSIM">
+		<property name="mobileNumber" value="7000088558" />
+	</bean>
+
+	<bean id="mobile" class="com.ssi.Mobile">
+		<property name="sim" ref="jioSIM" />
+	</bean>
+ -->
+
+
+</beans>
+

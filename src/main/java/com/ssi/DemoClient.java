@@ -10,6 +10,8 @@ public class DemoClient {
 		System.out.println("Creating ApplicationContext Object...");
 		ApplicationContext context=new ClassPathXmlApplicationContext("spring1.xml");
 		
+		 DemoBean ob1=context.getBean("d1",DemoBean.class);
+		 System.out.println(ob1);
 		/*
 		 System.out.println("Now Asking For An Instance With Id d1...!");
 		 DemoBean ob1=context.getBean("d1",DemoBean.class);

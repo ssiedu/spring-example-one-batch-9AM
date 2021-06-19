@@ -7,6 +7,23 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+	<bean id="d1" class="com.ssi.DemoBean">
+		<constructor-arg value="111" type="int"/>
+		<constructor-arg value="SSI" type="String"/>
+		
+<!-- 		<constructor-arg value="SSI" name="y" />
+		<constructor-arg value="111" name="x" />
+ -->		<!-- <constructor-arg value="SSI" index="1"/>
+		<constructor-arg value="555" index="0"/> -->
+	</bean>
+
+	<!-- <bean id="d1" class="com.ssi.DemoBean">
+		<property name="x" value="10"/>
+		<property name="y" value="abc"/>
+	</bean> -->
+
+
  
 <!-- 	<bean id="d1" class="com.ssi.DemoBean" scope="singleton" lazy-init="false" init-method="doIt" destroy-method="stop"  >
 		<property name="x" value="10"/>
@@ -14,11 +31,15 @@
 		</bean>		
  -->
 	
-
+<!-- 
 	<bean id="d1" class="com.ssi.DemoBean" scope="singleton" lazy-init="false">
 		<property name="x" value="10"/>
 		<property name="y" value="abc"/>
 	</bean>	
+ -->
+
+
+
 
 
 </beans>
