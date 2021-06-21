@@ -8,6 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
  
+ 	<bean class="com.ssi.MyBeanPostProcessor"/>
 
 	<bean id="address1" class="com.ssi.Address">
 		<property name="hno" value="5511" />
